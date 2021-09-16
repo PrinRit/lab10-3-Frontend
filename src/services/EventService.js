@@ -20,7 +20,7 @@ export default {
   saveEvent(event) {
     return apiClient.post('/auctionItems', event)
   },
-  // getEventByKeyword(keyword, perPage, page){
-  //   return apiClient.get('auctionItems?_limit='+ perPage +'&_page=' + page + '&description=' + keyword)
-  // }
+  getEventByKeyword(keyword, perPage, page){
+    return apiClient.get('auctionItems?_limit='+ perPage +'&_page=' + page + '&description=' + keyword)
+  }
 }
