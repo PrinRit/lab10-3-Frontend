@@ -11,16 +11,16 @@ const apiClient = axios.create({
 
 export default {
   getEvents(perPage, page) {
-    return apiClient.get('/events?_limit=' + perPage + '&_page=' + page)
+    return apiClient.get('/auctionItems?_limit=' + perPage + '&_page=' + page)
   },
   //Added new call
   getEvent(id) {
-    return apiClient.get('/events/' + id)
+    return apiClient.get('/auctionItems/' + id)
   },
   saveEvent(event) {
-    return apiClient.post('/events', event)
+    return apiClient.post('/auctionItems', event)
   },
-  getEventByKeyword(keyword, perPage, page){
-    return apiClient.get('events?_limit='+ perPage +'&_page=' + page + '&title=' + keyword)
-  }
+  // getEventByKeyword(keyword, perPage, page){
+  //   return apiClient.get('auctionItems?_limit='+ perPage +'&_page=' + page + '&description=' + keyword)
+  // }
 }
